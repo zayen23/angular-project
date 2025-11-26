@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #0d47a1;
+  color: #ffffff;
+}
+
+.header__brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header__link {
+  color: #bbdefb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header__link--active {
+  color: #ffffff;
+}
+
+
+

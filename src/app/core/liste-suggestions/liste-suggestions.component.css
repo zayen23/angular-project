@@ -1,0 +1,116 @@
+.suggestions {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.suggestions__title {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+.suggestions__search {
+  margin-bottom: 1.5rem;
+}
+
+.suggestions__search input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.suggestion-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+  margin-bottom: 1rem;
+}
+
+.suggestion-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.suggestion-card__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.suggestion-card__badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.suggestion-card__badge--accepted {
+  background-color: #e0f2f1;
+  color: #00695c;
+}
+
+.suggestion-card__badge--pending {
+  background-color: #fff8e1;
+  color: #ff8f00;
+}
+
+.suggestion-card__badge--refused {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.suggestion-card__meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+
+.suggestion-card__description {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.suggestion-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: #1976d2;
+  color: #ffffff;
+}
+
+.btn--secondary {
+  background-color: #eeeeee;
+  color: #424242;
+}
+
+.favorites {
+  margin-top: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.favorites__title {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+
+

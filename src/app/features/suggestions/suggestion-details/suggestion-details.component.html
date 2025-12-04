@@ -1,0 +1,33 @@
+<div class="suggestion-details" *ngIf="suggestion">
+  <a routerLink="/suggestions" class="suggestion-details__back">← Back to list</a>
+  
+  <div class="suggestion-details__header">
+    <h1 class="suggestion-details__title">{{ suggestion.title }}</h1>
+    <span
+      class="suggestion-details__badge"
+      [ngClass]="getStatusClass(suggestion.status)"
+    >
+      {{ getStatusLabel(suggestion.status) }}
+    </span>
+  </div>
+
+  <div class="suggestion-details__meta">
+    <span class="suggestion-details__category">{{ suggestion.category }}</span>
+    <span class="suggestion-details__date">
+      {{ suggestion.date | date: 'dd MMM yyyy' }}
+    </span>
+    <span class="suggestion-details__likes" *ngIf="suggestion.likes !== undefined">
+      👍 {{ suggestion.likes }} likes
+    </span>
+  </div>
+
+  <div class="suggestion-details__content">
+    <h2 class="suggestion-details__subtitle">Description</h2>
+    <p class="suggestion-details__description">{{ suggestion.description }}</p>
+  </div>
+</div>
+
+<div class="suggestion-details__error" *ngIf="!suggestion">
+  <p>Suggestion not found</p>
+  <a routerLink="/suggestions" class="suggestion-details__back">← Back to list</a>
+</div>

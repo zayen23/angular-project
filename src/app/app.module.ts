@@ -6,14 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
-import { ListeSuggestionsComponent } from './core/liste-suggestions/liste-suggestions.component';
+import { HomeComponent } from './core/home/home.component';
+import { NotfoundComponent } from './core/notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ListeSuggestionsComponent
+    HomeComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

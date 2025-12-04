@@ -1,0 +1,108 @@
+.suggestion-details {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.suggestion-details__back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #1976d2;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.suggestion-details__back:hover {
+  text-decoration: underline;
+}
+
+.suggestion-details__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.suggestion-details__title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.suggestion-details__badge {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.suggestion-details__badge--accepted {
+  background-color: #e0f2f1;
+  color: #00695c;
+}
+
+.suggestion-details__badge--pending {
+  background-color: #fff8e1;
+  color: #ff8f00;
+}
+
+.suggestion-details__badge--refused {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.suggestion-details__meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.suggestion-details__category {
+  font-weight: 500;
+}
+
+.suggestion-details__date {
+  color: #64748b;
+}
+
+.suggestion-details__likes {
+  color: #64748b;
+}
+
+.suggestion-details__content {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+}
+
+.suggestion-details__subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.suggestion-details__description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.suggestion-details__error {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.suggestion-details__error p {
+  font-size: 1.25rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+

@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
-import { Suggestion } from '../../models/suggestion';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Suggestion } from '../../../models/suggestion';
 
 @Component({
-  selector: 'app-liste-suggestions',
-  templateUrl: './liste-suggestions.component.html',
-  styleUrls: ['./liste-suggestions.component.css'],
+  selector: 'app-suggestion-details',
+  templateUrl: './suggestion-details.component.html',
+  styleUrl: './suggestion-details.component.css'
 })
-export class ListeSuggestionsComponent {
-  searchTerm = '';
-  suggestions: Suggestion[] = [
+export class SuggestionDetailsComponent implements OnInit {
+  suggestion: Suggestion | undefined;
+  
+  // Same data as in SuggestionsListComponent - ideally this should be in a service
+  private suggestions: Suggestion[] = [
     {
       id: 1,
       title: 'Organiser une journée team building',
@@ -61,38 +64,25 @@ export class ListeSuggestionsComponent {
     },
   ];
 
-  favorites: Suggestion[] = [];
+  constructor(private route: ActivatedRoute) {}
 
-  get filteredSuggestions(): Suggestion[] {
-    const term = this.searchTerm.toLowerCase();
-    return this.suggestions.filter(
-      (s) =>
-        s.title.toLowerCase().includes(term) ||
-        s.category.toLowerCase().includes(term)
-    );
+  ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      const suggestionId = +id;
+      this.suggestion = this.suggestions.find(s => s.id === suggestionId);
+    }
   }
 
-  canShowActions(suggestion: Suggestion): boolean {
-    return suggestion.status !== 'refusee';
+  getStatusLabel(status: string): string {
+    if (status === 'acceptee') return 'ACCEPTÉE';
+    if (status === 'refusee') return 'REFUSÉE';
+    return 'EN ATTENTE';
   }
 
-  like(suggestion: Suggestion): void {
-    if (!this.canShowActions(suggestion)) {
-      return;
-    }
-    suggestion.likes = (suggestion.likes ?? 0) + 1;
-  }
-
-  addToFavorites(suggestion: Suggestion): void {
-    if (!this.canShowActions(suggestion)) {
-      return;
-    }
-    const exists = this.favorites.some((fav) => fav.id === suggestion.id);
-    if (!exists) {
-      this.favorites.push(suggestion);
-    }
+  getStatusClass(status: string): string {
+    if (status === 'acceptee') return 'suggestion-details__badge--accepted';
+    if (status === 'refusee') return 'suggestion-details__badge--refused';
+    return 'suggestion-details__badge--pending';
   }
 }
-
-
-

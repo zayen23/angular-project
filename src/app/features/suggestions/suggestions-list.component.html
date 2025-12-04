@@ -45,6 +45,9 @@
       <button class="btn btn--secondary" (click)="addToFavorites(suggestion)">
         ❤️ Ajouter aux favoris
       </button>
+      <button class="btn btn--secondary" [routerLink]="['/suggestions', suggestion.id]">
+        Details
+      </button>
     </div>
   </article>
 
